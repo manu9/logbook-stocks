@@ -93,6 +93,11 @@ def save_ticker(ticker):
     try:
         conn = sqlite3.connect('stocklist.db', check_same_thread=False)
         cursor = conn.cursor()
+        cursor.execute(
+            '''
+            CREATE TABLE IF NOT EXISTS watchlist_stocks (USER TEXT(50), TICKER TEXT(10))
+            '''
+        )
         cursor.execute('''INSERT INTO watchlist_stocks VALUES (?,?)''', ('marandc', ticker))
         conn.commit()
     except:
