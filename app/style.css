@@ -1,0 +1,11 @@
+/* Style columns */
+.block-container {
+        /padding-top: 2rem;/
+    }
+
+.st-key-my_text_input{
+    border: 1px solid #DCDCDC;
+    border-radius: 10px;
+    padding: 5% 5% 5%;
+    width: 300px;
+}
